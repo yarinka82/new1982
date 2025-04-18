@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Future IT Agency</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #0a0a0a;
+      color: white;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1.2rem 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: #00e5ff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00e5ff;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+      z-index: 0;
+    }
+
+    .hero-content {
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2rem, 6vw, 5rem);
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 20px #00f5ff;
+    }
+
+    .typed-text {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #00e5ff;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 6rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      padding: 2rem;
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+    }
+
+    .section-dark {
+      background: linear-gradient(135deg, #121212, #1f1f1f);
+    }
+
+    .section-blue {
+      background: linear-gradient(135deg, #0d47a1, #1976d2);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #000;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>FUTURE</h1>
+    <ul>
+      <li><a href="#hero">Головна</a></li>
+      <li><a href="#services">Послуги</a></li>
+      <li><a href="#team">Команда</a></li>
+      <li><a href="#contact">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <video autoplay muted loop>
+      <source src="https://cdn.coverr.co/videos/coverr-coding-on-laptop-2601/1080p.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content" data-aos="fade-up">
+      <h1>We Build the Future</h1>
+      <div class="typed-text" id="typed-text"></div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section-dark" id="services" data-aos="fade-up">
+    <div class="glass">
+      <h2>Наші Послуги</h2>
+      <p>Веб-розробка, брендинг, мобільні додатки, UX/UI дизайн, анімація, автоматизація — ми все це перетворюємо на стильні цифрові рішення.</p>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section-blue" id="team" data-aos="fade-up">
+    <div class="glass">
+      <h2>Наша Команда</h2>
+      <p>Молоді таланти, досвідчені архітектори та креативні дизайнери — разом ми створюємо цифрову магію.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section-dark" id="contact" data-aos="fade-up">
+    <div class="glass">
+      <h2>Зв'язок</h2>
+      <p>Напишіть нам — і ми запустимо ваш проект у майбутнє 🚀</p>
+      <p>Email: hello@future.agency</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Future IT Agency. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    AOS.init({ duration: 1200 });
+
+    new Typed('#typed-text', {
+      strings: ["IT Solutions with Soul", "Creative Web & App Design", "We Code the Impossible"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
+</body>
+</html>
+
